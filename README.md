@@ -1,2 +1,4 @@
 # SystemAppsDisabler
-Fully Disable Pre-Installed System Apps
+Fully Disable/Remove Pre-Installed System Apps On Your PSVita.
+
+
