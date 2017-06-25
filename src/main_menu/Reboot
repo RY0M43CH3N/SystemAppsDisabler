@@ -1,0 +1,1 @@
+System.launchEboot("app0:reboot.bin") 

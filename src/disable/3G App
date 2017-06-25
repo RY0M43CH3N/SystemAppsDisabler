@@ -1,0 +1,20 @@
+local function deleteDirectory(dir)
+	local files = System.listDirectory(dir)
+	for i, file in pairs(files) do
+		if file.directory then
+			deleteDirectory(dir .. "/" .. file.name)
+		else
+			System.deleteFile(dir .. "/" .. file.name)
+		end
+	end
+	System.deleteDirectory(dir)
+end
+
+deleteDirectory("vs0:/app/NPXS10021/") 
+deleteDirectory("vs0:/app/NPXS10040/")
+deleteDirectory("vs0:/app/NPXS10041/")
+deleteDirectory("vs0:/app/NPXS10043/")
+deleteDirectory("vs0:/app/NPXS10044/")
+deleteDirectory("vs0:/app/NPXS10045/")
+System.deleteFile("ur0:/shell/db/app.db")
+dofile("app0:/main_menu/Disable System App")
